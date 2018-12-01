@@ -1,0 +1,13 @@
+React applications are isomorphic, providing universal rendering (even on the server side for SPA’s, single page applications) 
+and they implement Virtual DOM’s. These features make user actions interactive. Also, re-rendering will be done at vast speed. 
+React reinforces SEO with the help of its routers. Besides, react has built-in features for implementing routers for 
+single-page applications. On a whole, react has a clear upper hand in this line.
+
+Server-Side Rendering for React + React-router v3 + Redux stack.
+•	Asynchronously preloads pages before performing client-side navigation
+•	Provides an isomorphic HTTP client for calling REST API in Redux "action creators"
+•	Supports Webpack "hot reload" (aka "Hot Module Replacement")
+•	Provides supplementary utilities: locale detection for internationalization, easy setting page <title/>and <meta/>, programmatic redirects, 100% correct handling of HTTP Cookies, etc
+
+The key reference is at  
+https://www.npmjs.com/package/react-isomorphic-render
