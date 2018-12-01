@@ -1,5 +1,7 @@
-React uses JSX which identifies bugs at an earlier stage of development thus makes it easier for debugging. Quality of code is maintained by increasing the test coverage which is faster in React due to reusability.
- Injection attacks are of major concern to end user as they are prone to leak user’s confidential information and compromise on user privacy. Such cross-site scripting (XSS) attacks are security vulnerabilities are frequently in the web applications. In fact, XSS attacks account to 84% of all the security vulnerabilities identified in the market. By using JSX, React is eliminating XSS attacks and ensuring more safety to the user.
+React uses JSX which identifies bugs at an earlier stage of development thus makes it easier for debugging. 
+Quality of code is maintained by increasing the test coverage which is faster in React due to reusability.
+Injection attacks are of major concern to end user as they are prone to leak user’s confidential information and compromise on user privacy. Such cross-site scripting (XSS) attacks are security vulnerabilities are frequently in the web applications. In fact, XSS attacks account to 84% of all the security vulnerabilities identified in the market. By using JSX, React is eliminating XSS attacks and ensuring more safety to the user.
+
 The references are:
 https://en.wikipedia.org/wiki/Cross-site_scripting
 https://reactjs.org/docs/introducing-jsx.html
