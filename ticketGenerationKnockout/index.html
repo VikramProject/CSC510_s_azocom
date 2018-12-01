@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Knockout Application</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
+
+    </head>
+    <body class="container">
+        <div class="page-header">
+            <h1>Knockout Stress test</h1>
+        </div>
+        <form data-bind="submit: createTicketFunction">
+            <div  class="form-group">
+                <label for="forname">Name</label>
+                <input class="form-control" id="forname" data-bind='value: name, valueUpdate: "afterkeydown"'/>
+                <label for="forage">Age</label>
+                <input class="form-control" id="forage" data-bind='value: age, valueUpdate: "afterkeydown"'/>
+                <label for="forcountry">Country</label>
+                <input class="form-control" id="forcountry" data-bind='value: country, valueUpdate: "afterkeydown"'/>
+                <label for="forgender">Gender</label>
+                <select class="form-control" id="forgender" data-bind="value: gender, valueUpdate: 'afterkeydown'">
+                    <option value=""></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="N">None of the above</option>
+                </select>
+                <button type="submit">Create Ticket</button>
+            </div>
+
+        </form>
+        <h1>Hello, <span data-bind="text: name"></span></h1> 
+        <div data-bind="foreach: tickets">
+    <div style="display: inline-block; align-content: center; width: 300px; height: 120px; border-style: dotted dashed solid double; padding: 10px">
+        <h3>TICKET:&nbsp; <span data-bind="text:uniqueid"/></h3>
+        <h5>Name:&nbsp; <span data-bind="text: name"/></h5>
+        <h5>Age:&nbsp; <span data-bind="text: age"/></h5>
+        
+    </div>
+        </div>
+
+    </body>
+    
+    <script>
+        function AppViewModel() {
+            var self = this;
+            this.name = ko.observable("");
+            this.age = ko.observable("");
+            this.country = ko.observable("");
+            this.gender = ko.observable("");
+            this.tickets = ko.observableArray();
+            this.uniqueid = ko.observable(1201996220);
+            this.createTicketFunction = function(formElement){
+                var newticket = {};
+                newticket.name = self.name();
+                newticket.age = self.age();
+                newticket.country = self.country();
+                newticket.gender = self.gender();
+                newticket.uniqueid = self.uniqueid();
+                self.uniqueid(self.uniqueid()+1);
+                console.log("new ticket being added: "+newticket);
+                self.tickets.push(newticket);
+                console.log(self.tickets());
+            }
+            }
+            ko.applyBindings(new AppViewModel());
+    </script>
+</html>
