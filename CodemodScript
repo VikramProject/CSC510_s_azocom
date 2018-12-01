@@ -1,0 +1,4 @@
+React makes migration for faster by providing developers with React codemod scripts.
+react-codemod is a set of codemods for jscodeshift that help automate common tasks that React developers might want to perform.
+The following link to github contains some handy codes of codemod scripts which developers can use for migrating between versions of code.
+https://github.com/reactjs/react-codemod 
